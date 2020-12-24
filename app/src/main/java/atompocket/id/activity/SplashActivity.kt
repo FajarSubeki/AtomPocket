@@ -4,8 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.core.content.ContextCompat
 import atompocket.id.R
 import atompocket.id.util.AppConstant
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : BaseActivity() {
 
@@ -14,6 +16,7 @@ class SplashActivity : BaseActivity() {
         setContentView(R.layout.activity_splash)
 
         transparentStatusBar()
+        imgLogo.setImageDrawable(getBackground(R.drawable.atomic_logo))
         Handler().postDelayed({toActivity()}, AppConstant.LENGTH_SPLASH)
 
     }
