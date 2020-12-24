@@ -26,6 +26,7 @@ class RegisterActivity : BaseActivity() {
 
         tvAlreadyAccount.setOnClickListener {
             startActivity(Intent(this, SignInActivity::class.java))
+            finish()
         }
 
     }

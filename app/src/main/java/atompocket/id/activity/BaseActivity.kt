@@ -2,6 +2,7 @@ package atompocket.id.activity
 
 import android.graphics.drawable.Drawable
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -15,5 +16,7 @@ open class BaseActivity : AppCompatActivity() {
     open fun getBackground(drawable: Int): Drawable? {
         return ContextCompat.getDrawable(this, drawable)
     }
+
+    open fun showToast(message: String) = Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
 }
