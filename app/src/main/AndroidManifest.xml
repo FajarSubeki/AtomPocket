@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SignInActivity"></activity>
-        <activity android:name=".activity.RegisterActivity" />
-        <activity android:name=".activity.SplashActivity"
+        <activity android:name=".activity.SuccessRegisterActivity"
+            android:theme="@style/AppTheme.StatusBarWhite"/>
+        <activity android:name=".activity.SignInActivity"
+            android:theme="@style/AppTheme.StatusBarWhite"/>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:theme="@style/AppTheme.StatusBarWhite" />
+        <activity
+            android:name=".activity.SplashActivity"
             android:theme="@style/AppTheme.StatusBarCustom">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

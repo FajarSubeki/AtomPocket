@@ -9,6 +9,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="buttonStyle">@style/ButtonStyle</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
     </style>
 
     <style name="AppTheme.StatusBarCustom">
@@ -17,6 +20,16 @@
         <item name="android:textViewStyle">@style/TextViewStyle</item>
         <item name="buttonStyle">@style/ButtonStyle</item>
         <item name="android:buttonStyle">@style/ButtonStyle</item>
+    </style>
+
+    <style name="AppTheme.StatusBarWhite">
+        <item name="android:statusBarColor">@color/white</item>
+        <!-- <item name="fontFamily">@font/app_font</item>-->
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="buttonStyle">@style/ButtonStyle</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
     </style>
 
     <style name="TextViewStyle" parent="android:Widget.TextView">

@@ -14,7 +14,6 @@ class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
         transparentStatusBar()
         imgLogo.setImageDrawable(getBackground(R.drawable.atomic_logo))
         Handler().postDelayed({toActivity()}, AppConstant.LENGTH_SPLASH)
