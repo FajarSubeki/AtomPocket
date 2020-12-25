@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.AddWalletActivity">
+
+    <TextView
+        android:id="@+id/tvDescRegister"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Tambah Dompet Barumu Disini..."
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_marginTop="70dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDescRegister"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Nama Dompet"
+        android:paddingStart="35dp"
+        android:digits="a bcdefghijklmnopqrstuvwxyz"
+        android:textColorHint="@color/color_black_text"
+        android:background="@drawable/button_state_bg"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/etDesc"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:inputType="textEmailAddress"
+        android:hint="Deskripsi Dompet"
+        android:paddingStart="35dp"
+        android:textColorHint="@color/color_black_text"
+        android:background="@drawable/button_state_bg"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/etSaldo"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/etDesc"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:inputType="number"
+        android:hint="Saldo Anda"
+        android:paddingStart="35dp"
+        android:textColorHint="@color/color_black_text"
+        android:background="@drawable/button_state_bg"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btnCreate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/blue_bg"
+        android:layout_marginBottom="40dp"
+        android:text="Tambah Dompet"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_rounded_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

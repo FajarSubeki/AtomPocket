@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.room:room-coroutines:2.1.0-alpha04@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1dfe8c840299bf32841a26d9f20855dc/jetified-room-coroutines-2.1.0-alpha04/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1dfe8c840299bf32841a26d9f20855dc/jetified-room-coroutines-2.1.0-alpha04/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1dfe8c840299bf32841a26d9f20855dc/jetified-room-coroutines-2.1.0-alpha04/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5988530d402e86a2a4bb81cc278b44c/jetified-room-coroutines-2.1.0-alpha04/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5988530d402e86a2a4bb81cc278b44c/jetified-room-coroutines-2.1.0-alpha04/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5988530d402e86a2a4bb81cc278b44c/jetified-room-coroutines-2.1.0-alpha04/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

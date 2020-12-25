@@ -14,8 +14,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_menu" />
-                            <entry key="sourceFile" value="C:\Users\treza\Downloads\menu.svg" />
+                            <entry key="outputName" value="ic_delete" />
+                            <entry key="sourceFile" value="C:\Users\treza\Downloads\delete.svg" />
                           </map>
                         </option>
                       </PersistentState>

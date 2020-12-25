@@ -6,6 +6,7 @@
     android:layout_marginStart="24dp"
     android:layout_marginEnd="24dp"
     android:layout_marginTop="15dp"
+    app:cardUseCompatPadding="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="13dp">
@@ -69,12 +70,13 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/ivMenu"
                 android:layout_marginTop="5dp"
                 android:layout_alignParentEnd="true"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
-                android:src="@drawable/ic_menu"
-                app:tint="@color/color_black_light" />
+                android:src="@drawable/ic_delete"
+                app:tint="@color/red_bg" />
 
         </RelativeLayout>
 
@@ -116,7 +118,7 @@
             </LinearLayout>
 
             <Switch
-                android:id="@+id/swOnTop"
+                android:id="@+id/swWallet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
