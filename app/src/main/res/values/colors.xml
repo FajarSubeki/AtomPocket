@@ -19,5 +19,7 @@
     <color name="color_black_light">#A9333333</color>
     <color name="color_grey">#eee</color>
     <color name="red_bg">#ff3838</color>
+    <color name="color_grey_bg">#F2F1F4</color>
+    <color name="color_grey_selectornav">#CDD2E0</color>
 
 </resources>
