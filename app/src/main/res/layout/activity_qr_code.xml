@@ -117,8 +117,7 @@
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/qr_code"
-                app:tint="@android:color/black" />
+                android:src="@drawable/qrcode2"/>
 
             <ImageView
                 android:id="@+id/ivLogo"

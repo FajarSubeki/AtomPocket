@@ -35,6 +35,9 @@ android {
     androidExtensions {
         experimental = true
     }
+    dataBinding{
+        enabled=true
+    }
 }
 
 dependencies {
@@ -47,4 +50,20 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // View model
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
+
+    // Courutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+
+    // Room database
+    implementation "androidx.room:room-runtime:${roomVersionRuntime}"
+    kapt "androidx.room:room-compiler:${roomVersion}"
+    implementation "androidx.room:room-coroutines:${roomVersion}"
+
+    // Gson
+    implementation "com.google.code.gson:gson:${gsonVersion}"
 }

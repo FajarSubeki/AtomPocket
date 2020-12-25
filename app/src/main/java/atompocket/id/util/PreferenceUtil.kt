@@ -1,0 +1,23 @@
+package atompocket.id.util
+
+import android.content.Context
+import android.content.SharedPreferences
+import android.content.SharedPreferences.Editor
+
+object PreferenceUtil {
+
+    private var context: Context? = null
+    val NAME = "app_preference"
+    val SETUP_REGISTER = "register"
+    val SETUP_LOGIN = "login"
+    val SALDO = "2500000"
+
+    fun getPref(context: Context): SharedPreferences? {
+        return context.getSharedPreferences(NAME, Context.MODE_PRIVATE)
+    }
+
+    fun getEditor(context: Context): Editor? {
+        return context.getSharedPreferences(NAME, Context.MODE_PRIVATE).edit()
+    }
+
+}

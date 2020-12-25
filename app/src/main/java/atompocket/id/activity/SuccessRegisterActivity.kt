@@ -1,9 +1,10 @@
 package atompocket.id.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import atompocket.id.R
+import atompocket.id.pojo.User
+import atompocket.id.util.SessionManager
 import kotlinx.android.synthetic.main.activity_success_register.*
 
 class SuccessRegisterActivity : BaseActivity() {
@@ -17,7 +18,9 @@ class SuccessRegisterActivity : BaseActivity() {
         ivThumbsUp.setImageDrawable(getBackground(R.drawable.thumbs_up))
         btnToMain.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
+
     }
 
 }
