@@ -276,7 +276,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <Button
-        android:id="@+id/btnCreateAccount"
+        android:id="@+id/btnSendTrans"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
         android:layout_height="65dp"
