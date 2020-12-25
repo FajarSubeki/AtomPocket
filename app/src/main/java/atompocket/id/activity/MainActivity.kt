@@ -14,8 +14,18 @@ class MainActivity : BaseActivity() {
 
         transparentStatusBar()
 
+        initView()
+    }
+
+    private fun initView(){
         ivQrCode.setOnClickListener {
             startActivity(Intent(this, QrCodeActivity::class.java))
+        }
+        llTransaction.setOnClickListener {
+            startActivity(Intent(this, TransactionActivity::class.java))
+        }
+        llWallet.setOnClickListener {
+            startActivity(Intent(this, WalletActivity::class.java))
         }
     }
 }

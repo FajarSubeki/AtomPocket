@@ -4,6 +4,290 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_grey_bg"
     tools:context=".activity.TransactionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            layout="@layout/toolbar_view"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/constraint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/tvTitleSuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 500.000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/black"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleSuccess"
+                android:layout_width="match_parent"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/color_black_text"/>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengeluaran Detail"
+                android:layout_marginStart="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.cardview.widget.CardView
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="30dp">
+
+                    <ImageView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/ivOut"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/send"
+                        app:tint="@color/blue_bg" />
+
+                    <TextView
+                        android:id="@+id/tvText01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Tipe Pengeluaran"
+                        android:layout_marginStart="14dp"
+                        app:layout_constraintStart_toEndOf="@id/ivOut"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvText02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvText01"
+                        android:text="Uang Keluar"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@id/ivOut"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvText03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvText02"
+                        android:text="Ubah"
+                        android:layout_marginStart="14dp"
+                        android:textColor="@color/blue_bg"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@id/ivOut"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvText03"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/color_grey" />
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/ivWallet"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/credit_card"
+                        app:tint="@color/blue_bg" />
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/tvText05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        android:text="Dompet"
+                        android:layout_marginStart="14dp"
+                        app:layout_constraintStart_toEndOf="@id/ivWallet"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvText06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvText05"
+                        android:text="Dompet Utama - Rp 1.200.000"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@id/ivOut"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvText07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvText06"
+                        android:text="Ubah"
+                        android:layout_marginStart="14dp"
+                        android:textColor="@color/blue_bg"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@id/ivOut"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvText07"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/color_grey" />
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/view3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/ivDesc"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/credit_card"
+                        app:tint="@color/blue_bg" />
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/tvText08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/view3"
+                        android:text="Deskripsi (Opsional)"
+                        android:layout_marginStart="14dp"
+                        app:layout_constraintStart_toEndOf="@id/ivWallet"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/tvText09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvText08"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@id/ivOut"
+                        android:textSize="16sp"
+                        android:hint="Tidak ada deskripsi" />
+
+                    <TextView
+                        android:id="@+id/tvText10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvText09"
+                        android:text="Ubah"
+                        android:layout_marginStart="14dp"
+                        android:textColor="@color/blue_bg"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@id/ivOut"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvText10"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/color_grey" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/blue_bg"
+        android:layout_marginBottom="30dp"
+        android:text="Kirim"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_rounded_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ReportActivity"></activity>
-        <activity android:name=".activity.TransactionActivity" />
-        <activity android:name=".activity.WalletActivity" />
+        <activity android:name=".activity.SuccessTransactionActivity"
+            android:theme="@style/AppTheme.StatusBarCustom"/>
+        <activity android:name=".activity.ReportActivity" />
+        <activity
+            android:name=".activity.TransactionActivity"
+            android:theme="@style/AppTheme.StatusBarWhite" />
+        <activity
+            android:name=".activity.WalletActivity"
+            android:theme="@style/AppTheme.StatusBarWhite" />
         <activity
             android:name=".activity.QrCodeActivity"
             android:theme="@style/AppTheme.StatusBarCustom" />
