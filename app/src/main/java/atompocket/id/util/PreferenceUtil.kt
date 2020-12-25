@@ -10,7 +10,7 @@ object PreferenceUtil {
     val NAME = "app_preference"
     val SETUP_REGISTER = "register"
     val SETUP_LOGIN = "login"
-    val SALDO = "2500000"
+    val SALDO = "saldo_masuk"
 
     fun getPref(context: Context): SharedPreferences? {
         return context.getSharedPreferences(NAME, Context.MODE_PRIVATE)
