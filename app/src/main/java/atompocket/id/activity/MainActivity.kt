@@ -27,5 +27,8 @@ class MainActivity : BaseActivity() {
         llWallet.setOnClickListener {
             startActivity(Intent(this, WalletActivity::class.java))
         }
+        llReport.setOnClickListener {
+            startActivity(Intent(this, ReportActivity::class.java))
+        }
     }
 }
