@@ -1,7 +1,6 @@
 package atompocket.id.adapter
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import atompocket.id.R
 import atompocket.id.database.Transaction
 import kotlinx.android.synthetic.main.item_transaction.view.*
-import kotlinx.android.synthetic.main.item_wallet.view.*
 import kotlinx.android.synthetic.main.item_wallet.view.tvDescWallet
 import kotlinx.android.synthetic.main.item_wallet.view.tvTitleWallet
 import java.text.DecimalFormat

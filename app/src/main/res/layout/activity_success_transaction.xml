@@ -15,7 +15,7 @@
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/bg_success_party"/>
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -28,7 +28,8 @@
         android:textStyle="bold"
         android:layout_marginTop="80dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
 
     <androidx.cardview.widget.CardView
         app:layout_constraintTop_toBottomOf="@id/ivSuccess"
@@ -59,7 +60,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view1"
@@ -78,7 +80,8 @@
                 android:textSize="15sp"
                 android:text="Tanggal"
                 android:textStyle="bold"
-                android:id="@+id/tvDate"/>
+                android:id="@+id/tvDate"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_marginTop="5dp"
@@ -90,7 +93,8 @@
                 android:text="13 Desember 2020"
                 android:textColor="@color/color_black_text"
                 android:textStyle="bold"
-                android:id="@+id/tvDate2"/>
+                android:id="@+id/tvDate2"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_marginTop="10dp"
@@ -101,7 +105,8 @@
                 android:textSize="15sp"
                 android:text="Tipe"
                 android:textStyle="bold"
-                android:id="@+id/tvTitleType"/>
+                android:id="@+id/tvTitleType"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_marginTop="3dp"
@@ -113,7 +118,8 @@
                 android:text="Uang Keluar"
                 android:textColor="@color/red_bg"
                 android:textStyle="bold"
-                android:id="@+id/tvType"/>
+                android:id="@+id/tvType"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_marginTop="10dp"
@@ -124,7 +130,8 @@
                 android:textSize="15sp"
                 android:text="Nilai"
                 android:textStyle="bold"
-                android:id="@+id/tvTitleValue"/>
+                android:id="@+id/tvTitleValue"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_marginTop="3dp"
@@ -137,7 +144,8 @@
                 android:text="Rp 500.000"
                 android:textColor="@color/red_bg"
                 android:textStyle="bold"
-                android:id="@+id/tvValue"/>
+                android:id="@+id/tvValue"
+                tools:ignore="HardcodedText" />
 
             <Button
                 android:id="@+id/btnClose"
@@ -152,7 +160,8 @@
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/white"
-                android:background="@drawable/bg_rounded_button"/>
+                android:background="@drawable/bg_rounded_button"
+                tools:ignore="HardcodedText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

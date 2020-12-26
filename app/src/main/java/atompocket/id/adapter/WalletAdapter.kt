@@ -4,12 +4,10 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 import atompocket.id.R
 import atompocket.id.database.Wallet
 import kotlinx.android.synthetic.main.item_wallet.view.*
-import java.lang.NumberFormatException
 import java.text.DecimalFormat
 import java.text.NumberFormat
 

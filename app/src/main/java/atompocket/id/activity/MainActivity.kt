@@ -27,11 +27,11 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     private fun initView(){
 
         // set background
-        ivAvatar.background = getBackground(R.drawable.avatar)
-        ivQrCode.background = getBackground(R.drawable.qr_code)
-        ivTrans.background = getBackground(R.drawable.send)
-        ivWallet.background = getBackground(R.drawable.credit_card)
-        ivReport.background = getBackground(R.drawable.grafik)
+        ivAvatar.setImageDrawable(getBackground(R.drawable.avatar))
+        ivQrCode.setImageDrawable(getBackground(R.drawable.qr_code))
+        ivTrans.setImageDrawable(getBackground(R.drawable.send))
+        ivWallet.setImageDrawable(getBackground(R.drawable.credit_card))
+        ivReport.setImageDrawable(getBackground(R.drawable.grafik))
 
         // init onclick event
         ivQrCode.setOnClickListener(this)
@@ -48,7 +48,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         // set default saldo 2.500.000
         val saldoValue: Int? = PreferenceUtil.getPref(this)?.getInt(PreferenceUtil.SALDO, 0)
         if (saldoValue == 0){
-            PreferenceUtil.getEditor(getApplication())?.putInt(PreferenceUtil.SALDO, AppConstant.SALDO_MASUK)?.commit()
+            PreferenceUtil.getEditor(application)?.putInt(PreferenceUtil.SALDO, AppConstant.SALDO_MASUK)?.commit()
         }
 
         val formatter: NumberFormat = DecimalFormat("#,###")
@@ -60,10 +60,10 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         tvSumOutcome.text = "Rp. " + formatter.format(uangKeluar)
 
         // set description with name ser login
-        if (SessionManager.getProfile(getApplication()) == null) return
-        val own: User? = SessionManager.getProfile(getApplication())
+        if (SessionManager.getProfile(application) == null) return
+        val own: User? = SessionManager.getProfile(application)
         if (own != null) {
-            tvDescPengeluaran.setText("Hai " + own.fullname + getString(R.string.str_desc_main))
+            tvDescPengeluaran.text = "Hai " + own.fullname + getString(R.string.str_desc_main)
         }
 
         // set format number for current saldo
@@ -71,16 +71,22 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        if (p0 == ivQrCode){
-            startActivity(Intent(this, QrCodeActivity::class.java))
-        }else if (p0 == llTransaction){
-            startActivity(Intent(this, TransactionActivity::class.java))
-        }else if (p0 == llWallet){
-            startActivity(Intent(this, WalletActivity::class.java))
-        }else if (p0 == llReport){
-            startActivity(Intent(this, ReportActivity::class.java))
-        }else if (p0 == tvDetailDesc){
-            startActivity(Intent(this, ReportActivity::class.java))
+        when (p0) {
+            ivQrCode -> {
+                startActivity(Intent(this, QrCodeActivity::class.java))
+            }
+            llTransaction -> {
+                startActivity(Intent(this, TransactionActivity::class.java))
+            }
+            llWallet -> {
+                startActivity(Intent(this, WalletActivity::class.java))
+            }
+            llReport -> {
+                startActivity(Intent(this, ReportActivity::class.java))
+            }
+            tvDetailDesc -> {
+                startActivity(Intent(this, ReportActivity::class.java))
+            }
         }
     }
 }

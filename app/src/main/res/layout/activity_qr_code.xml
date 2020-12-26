@@ -19,7 +19,8 @@
         android:text="Rp 2.500.000"
         android:textColor="@android:color/white"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardQrCode"
@@ -50,10 +51,11 @@
                 app:cardCornerRadius="15dp">
 
                 <ImageView
+                    android:id="@+id/ivAvatar2"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/avatar" />
+                    tools:ignore="ContentDescription" />
 
             </androidx.cardview.widget.CardView>
 
@@ -78,7 +80,8 @@
                     android:textStyle="bold"
                     app:layout_constraintTop_toTopOf="@id/ivAvatar"
                     app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
-                    app:layout_constraintStart_toEndOf="@id/ivAvatar" />
+                    app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/tvActivity"
@@ -87,7 +90,8 @@
                     android:text="Fajar Subeki"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -106,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_barcode"/>
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/ivQrcode"
@@ -117,7 +121,7 @@
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/qrcode2"/>
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/ivLogo"
@@ -128,7 +132,7 @@
                 android:layout_width="110dp"
                 android:layout_height="30dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/icon_blue" />
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -164,11 +168,12 @@
                 app:cardCornerRadius="13dp">
 
                 <ImageView
+                    android:id="@+id/ivIde"
                     android:layout_margin="15dp"
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:src="@drawable/idea"
-                    app:tint="@color/blue_bg" />
+                    app:tint="@color/blue_bg"
+                    tools:ignore="ContentDescription" />
 
             </androidx.cardview.widget.CardView>
 
@@ -182,7 +187,8 @@
                 app:layout_constraintStart_toEndOf="@id/cardQrCode2"
                 android:textColor="@android:color/white"
                 android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="180dp"
@@ -193,7 +199,8 @@
                 app:layout_constraintStart_toEndOf="@id/cardQrCode2"
                 android:textColor="@android:color/white"
                 android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

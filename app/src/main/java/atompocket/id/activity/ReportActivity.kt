@@ -7,11 +7,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import atompocket.id.R
 import atompocket.id.adapter.TransactionAdapter
-import atompocket.id.adapter.WalletAdapter
 import atompocket.id.database.Transaction
 import atompocket.id.viewmodel.WalletViewModel
 import kotlinx.android.synthetic.main.activity_report.*
-import kotlinx.android.synthetic.main.activity_wallet.*
 import kotlinx.android.synthetic.main.toolbar_view.*
 
 class ReportActivity : BaseActivity(), TransactionAdapter.transactionEvent {

@@ -3,8 +3,6 @@ package atompocket.id.activity
 import android.content.Intent
 import android.os.Bundle
 import atompocket.id.R
-import atompocket.id.pojo.User
-import atompocket.id.util.SessionManager
 import kotlinx.android.synthetic.main.activity_success_register.*
 
 class SuccessRegisterActivity : BaseActivity() {

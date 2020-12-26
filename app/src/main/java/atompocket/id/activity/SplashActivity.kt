@@ -10,15 +10,23 @@ import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : BaseActivity() {
 
+    @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        // set status bar color blue
         transparentStatusBar()
         imgLogo.setImageDrawable(getBackground(R.drawable.atomic_logo))
+
+        // delay for to next activity
         Handler().postDelayed({ toActivity() }, AppConstant.LENGTH_SPLASH)
 
     }
 
+    /*
+    * state for choose actvity want to run base on preference
+    * */
     private fun toActivity(){
 
         val isRegisterDone: Boolean? = PreferenceUtil.getPref(this)?.getBoolean(PreferenceUtil.SETUP_REGISTER, false)

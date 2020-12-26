@@ -1,8 +1,8 @@
 package atompocket.id.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import atompocket.id.R
+import kotlinx.android.synthetic.main.activity_qr_code.*
 
 class QrCodeActivity : BaseActivity() {
 
@@ -11,6 +11,13 @@ class QrCodeActivity : BaseActivity() {
         setContentView(R.layout.activity_qr_code)
 
         transparentStatusBar()
+
+        // set bacgkround
+        ivAvatar2.setImageDrawable(getBackground(R.drawable.avatar))
+        ivBarcode.setImageDrawable(getBackground(R.drawable.ic_barcode))
+        ivQrcode.setImageDrawable(getBackground(R.drawable.qrcode2))
+        ivLogo.setImageDrawable(getBackground(R.drawable.icon_blue))
+        ivIde.setImageDrawable(getBackground(R.drawable.idea))
     }
 
 }

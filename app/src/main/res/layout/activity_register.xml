@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -10,7 +10,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
@@ -27,7 +26,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/tvDescRegister"
@@ -43,7 +43,8 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@color/color_black_light"/>
+            android:textColor="@color/color_black_light"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/etFullName"
@@ -61,7 +62,7 @@
             android:digits="a bcdefghijklmnopqrstuvwxyz"
             android:textColorHint="@color/color_black_text"
             android:background="@drawable/button_state_bg"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
 
         <EditText
             android:id="@+id/etEmail"
@@ -79,7 +80,7 @@
             android:paddingStart="35dp"
             android:textColorHint="@color/color_black_text"
             android:background="@drawable/button_state_bg"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etPasswordLayout"
@@ -103,7 +104,8 @@
                 android:text="@={authViewModel.password}"
                 android:textColorHint="@color/color_black_text"
                 android:background="@drawable/button_state_bg"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                tools:ignore="HardcodedText,RtlSymmetry" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,7 +141,7 @@
                 android:text="Dengan membuat akun ini saya setuju dengan semua peraturan yang berlaku"
                 android:textColor="@color/color_black_light"
                 android:textSize="15sp"
-                tools:ignore="RtlSymmetry" />
+                tools:ignore="HardcodedText,RtlSymmetry" />
 
         </LinearLayout>
 
@@ -154,7 +156,8 @@
             android:textSize="17sp"
             android:gravity="center_horizontal|center"
             android:layout_marginBottom="50dp"
-            android:text="Sudah punya akun? - Masuk"/>
+            android:text="Sudah punya akun? - Masuk"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnCreateAccount"
@@ -169,7 +172,8 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="@color/white"
-            android:background="@drawable/bg_rounded_button"/>
+            android:background="@drawable/bg_rounded_button"
+            tools:ignore="HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

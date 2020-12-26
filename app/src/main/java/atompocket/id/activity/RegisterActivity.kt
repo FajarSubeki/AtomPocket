@@ -13,8 +13,11 @@ import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseActivity(), View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
+    /*
+    * Init view model
+    * */
     private lateinit var userViewModel: AuthViewModel
-    var isCheck: Boolean = false
+    private var isCheck: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,13 +25,18 @@ class RegisterActivity : BaseActivity(), View.OnClickListener, CompoundButton.On
         val binding: ActivityRegisterBinding = DataBindingUtil.setContentView(this, R.layout.activity_register)
         userViewModel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
 
+        // binding to xml layout
         binding.authViewModel = userViewModel
 
+        // set status bar color white
         transparentStatusBar()
 
         initView()
     }
 
+    /*
+    * Init event listener component view
+    * */
     private fun initView(){
 
         btnCreateAccount.setOnClickListener(this)
@@ -41,7 +49,8 @@ class RegisterActivity : BaseActivity(), View.OnClickListener, CompoundButton.On
     override fun onClick(p0: View?) {
 
         if (p0 == btnCreateAccount){
-            userViewModel?.registerClick(isCheck, listener)
+            // call view model function for register
+            userViewModel.registerClick(isCheck, listener)
         }else if (p0 == tvAlreadyAccount){
             startActivity(Intent(this, SignInActivity::class.java))
             finish()
@@ -49,17 +58,26 @@ class RegisterActivity : BaseActivity(), View.OnClickListener, CompoundButton.On
 
     }
 
+    /*
+    * listener when success register
+    * */
     private  val listener = object : AuthViewModel.onSuccessListener{
         override fun onSuccess() {
             Intent()
         }
     }
 
+    /*
+    * move screen to next page
+    * */
     private fun Intent(){
         startActivity(Intent(this, SuccessRegisterActivity::class.java))
         finish()
     }
 
+    /*
+    * listener for checkbox
+    * */
     override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
         if (p1){
             isCheck = true

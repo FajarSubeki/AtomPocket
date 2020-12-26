@@ -55,7 +55,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textColor="@android:color/black"
                 android:textSize="45sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="Autofill,HardcodedText" />
 
             <View
                 android:id="@+id/view"
@@ -78,7 +79,8 @@
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
 
             <androidx.cardview.widget.CardView
                 app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -105,8 +107,8 @@
                         android:id="@+id/ivOut"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/send"
-                        app:tint="@color/blue_bg" />
+                        app:tint="@color/blue_bg"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/tvText01"
@@ -118,7 +120,8 @@
                         app:layout_constraintStart_toEndOf="@id/ivOut"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
                     <Spinner
                         android:id="@+id/tvText02"
@@ -149,8 +152,8 @@
                         android:id="@+id/ivWallet"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/credit_card"
-                        app:tint="@color/blue_bg" />
+                        app:tint="@color/blue_bg"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_marginTop="15dp"
@@ -163,7 +166,8 @@
                         app:layout_constraintStart_toEndOf="@id/ivWallet"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
                     <Spinner
                         android:id="@+id/tvText06"
@@ -194,8 +198,8 @@
                         android:id="@+id/ivDesc"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/credit_card"
-                        app:tint="@color/blue_bg" />
+                        app:tint="@color/blue_bg"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_marginTop="15dp"
@@ -208,7 +212,8 @@
                         app:layout_constraintStart_toEndOf="@id/ivWallet"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
                     <EditText
                         android:id="@+id/tvText09"
@@ -219,7 +224,8 @@
                         android:layout_marginTop="5dp"
                         app:layout_constraintStart_toEndOf="@id/ivOut"
                         android:textSize="16sp"
-                        android:hint="Tidak ada deskripsi" />
+                        android:hint="Tidak ada deskripsi"
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
 
                     <View
                         android:id="@+id/view4"
@@ -252,6 +258,7 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="@color/white"
-        android:background="@drawable/bg_rounded_button"/>
+        android:background="@drawable/bg_rounded_button"
+        tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

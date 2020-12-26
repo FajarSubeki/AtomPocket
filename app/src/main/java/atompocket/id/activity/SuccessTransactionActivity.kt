@@ -1,7 +1,6 @@
 package atompocket.id.activity
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import atompocket.id.R
 import kotlinx.android.synthetic.main.activity_success_transaction.*
@@ -27,7 +26,11 @@ class SuccessTransactionActivity : BaseActivity() {
             val type: String = intent.getStringExtra("type").toString()
             val saldo: String = intent.getStringExtra("saldo").toString()
 
-            if (type.equals("Uang Keluar")){
+            // set background
+            ivSuccess.setImageDrawable(getBackground(R.drawable.bg_success_party))
+
+            // set text color base on type transaction
+            if (type == "Uang Keluar"){
                 tvType.setTextColor(getColor(R.color.red_bg))
                 tvValue.setTextColor(getColor(R.color.red_bg))
             }else{
@@ -36,10 +39,12 @@ class SuccessTransactionActivity : BaseActivity() {
             }
             tvType.text = type
 
+            // auto number formatting
             val formatter: NumberFormat = DecimalFormat("#,###")
             val saldoValue: Int? = saldo.toInt()
             tvValue.text = "Rp. " + formatter.format(saldoValue)
 
+            // get date now
             val sdf = SimpleDateFormat("dd MMM yyyy")
             val currentDate = sdf.format(Date())
             tvDate2.text = currentDate

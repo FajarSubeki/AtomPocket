@@ -1,7 +1,6 @@
 package atompocket.id.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -22,6 +21,7 @@ class WalletActivity : BaseActivity(), WalletAdapter.walletEvents {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wallet)
 
+        // set status bar color white
         transparentStatusBar()
         initView()
     }
@@ -48,12 +48,18 @@ class WalletActivity : BaseActivity(), WalletAdapter.walletEvents {
         }
     }
 
+    /*
+    * listener for detele walled
+    * */
     override fun onMenuClicked(wallet: Wallet) {
         walletViewModel.deleteTodo(wallet)
     }
 
-    override fun onSwitchClicked(wallet: Wallet, isCheck: Boolean) {
-        if (isCheck){
+    /*
+    * listener for udpate wallet status active or not
+    * */
+    override fun onSwitchClicked(wallet: Wallet, ischeck: Boolean) {
+        if (ischeck){
             walletViewModel.udpateWalletStatus(1, wallet)
         }else{
             walletViewModel.udpateWalletStatus(0, wallet)

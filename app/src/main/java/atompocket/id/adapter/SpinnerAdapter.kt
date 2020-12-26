@@ -9,7 +9,6 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import atompocket.id.R
 import atompocket.id.database.Wallet
-import java.lang.NumberFormatException
 import java.text.DecimalFormat
 import java.text.NumberFormat
 

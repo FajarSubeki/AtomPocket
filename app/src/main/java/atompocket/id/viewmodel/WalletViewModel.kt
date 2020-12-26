@@ -5,7 +5,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import atompocket.id.database.Transaction
 import atompocket.id.database.Wallet
-import atompocket.id.database.WalletDao
 import atompocket.id.repository.WalletRepository
 
 class WalletViewModel(application: Application) : AndroidViewModel(application) {

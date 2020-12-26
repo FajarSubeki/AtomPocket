@@ -1,6 +1,5 @@
 package atompocket.id.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProviders
 import atompocket.id.R
@@ -11,6 +10,9 @@ import kotlinx.android.synthetic.main.activity_add_wallet.*
 
 class AddWalletActivity : BaseActivity() {
 
+    /*
+    * Init view model
+    * */
     private lateinit var walletViewModel: WalletViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +21,7 @@ class AddWalletActivity : BaseActivity() {
 
         walletViewModel = ViewModelProviders.of(this).get(WalletViewModel::class.java)
 
+        // set white status bar
         transparentStatusBar()
 
         btnCreate.setOnClickListener {
@@ -26,6 +29,9 @@ class AddWalletActivity : BaseActivity() {
         }
     }
 
+    /*
+    * save wallet to room database and re-count saldo
+    * */
     private fun saveWallet(){
         if (validateFields()){
             val getSaldo: String = etSaldo.text.toString()
