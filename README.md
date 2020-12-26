@@ -21,3 +21,8 @@ Atom Pocket merupakan Sebuah aplikasi yang dapat melakukan pencatatan keuangan s
   </div>
 </div>
 
+
+.column {
+  float: left;
+  width: 33.33%;
+}
