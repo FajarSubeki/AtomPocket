@@ -13,5 +13,5 @@ Atom Pocket merupakan Sebuah aplikasi yang dapat melakukan pencatatan keuangan s
 
 # Splash Screen
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/33746018/56709913-f6119180-674d-11e9-806d-03b59907f9f8.jpg" align="middle" width="300" height="450" />
+  <img src="https://github.com/FajarSubeki/AtomPocket/blob/main/screenshoot/WhatsApp%20Image%202020-12-26%20at%2012.45.25%20(1).jpeg" align="middle" width="300" height="450" />
 </p>
