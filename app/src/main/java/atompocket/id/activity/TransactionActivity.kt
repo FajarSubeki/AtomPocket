@@ -155,6 +155,10 @@ class TransactionActivity : BaseActivity() {
             tvTitleSuccess.requestFocus()
             return false
         }
+        if (wallet_type.toString().isEmpty()) {
+            tvTitleSuccess.error = getString(R.string.str_kurang)
+            return false
+        }
         return true
     }
 

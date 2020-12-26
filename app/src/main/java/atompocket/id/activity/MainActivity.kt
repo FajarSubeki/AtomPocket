@@ -39,6 +39,12 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         llWallet.setOnClickListener(this)
         llReport.setOnClickListener(this)
         tvDetailDesc.setOnClickListener(this)
+
+        // set default saldo 2.500.000
+        val saldoValue: Int? = PreferenceUtil.getPref(this)?.getInt(PreferenceUtil.SALDO, 0)
+        if (saldoValue == 0){
+            PreferenceUtil.getEditor(application)?.putInt(PreferenceUtil.SALDO, AppConstant.SALDO_MASUK)?.commit()
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -63,7 +69,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         if (SessionManager.getProfile(application) == null) return
         val own: User? = SessionManager.getProfile(application)
         if (own != null) {
-            tvDescPengeluaran.text = "Hai " + own.fullname + getString(R.string.str_desc_main)
+            tvDescPengeluaran.text = "Hai " + own.fullname + " " + getString(R.string.str_desc_main)
         }
 
         // set format number for current saldo

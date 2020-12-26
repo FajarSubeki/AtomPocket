@@ -12,7 +12,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/tvSumIncome"
+        android:id="@+id/tvIncome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -24,7 +24,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardQrCode"
-        app:layout_constraintTop_toBottomOf="@id/tvSumIncome"
+        app:layout_constraintTop_toBottomOf="@id/tvIncome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -84,7 +84,7 @@
                     tools:ignore="HardcodedText" />
 
                 <TextView
-                    android:id="@+id/tvActivity"
+                    android:id="@+id/tvFullName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fajar Subeki"

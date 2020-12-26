@@ -1,11 +1,19 @@
 package atompocket.id.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import atompocket.id.R
+import atompocket.id.pojo.User
+import atompocket.id.util.PreferenceUtil
+import atompocket.id.util.SessionManager
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_qr_code.*
+import java.text.DecimalFormat
+import java.text.NumberFormat
 
 class QrCodeActivity : BaseActivity() {
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qr_code)
@@ -18,6 +26,18 @@ class QrCodeActivity : BaseActivity() {
         ivQrcode.setImageDrawable(getBackground(R.drawable.qrcode2))
         ivLogo.setImageDrawable(getBackground(R.drawable.icon_blue))
         ivIde.setImageDrawable(getBackground(R.drawable.idea))
+
+        // auto number formatting
+        val formatter: NumberFormat = DecimalFormat("#,###")
+        val saldoValue: Int? = PreferenceUtil.getPref(this)?.getInt(PreferenceUtil.SALDO, 0)
+        tvIncome.text = "Rp. " +  formatter.format(saldoValue)
+
+        if (SessionManager.getProfile(application) == null) return
+        val own: User? = SessionManager.getProfile(application)
+        if (own != null) {
+            tvFullName.text = own.fullname
+        }
+
     }
 
 }
