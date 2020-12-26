@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Wallet::class, Transaction::class], version = 1, exportSchema = false)
+@Database(entities = [Wallet::class, Transaction::class], version = 3, exportSchema = false)
 abstract class AtomDatabase : RoomDatabase() {
 
     abstract fun walletDao(): WalletDao
@@ -19,6 +19,7 @@ abstract class AtomDatabase : RoomDatabase() {
                     INSTANCE = Room.databaseBuilder(context,
                             AtomDatabase::class.java,
                             "atom_db")
+                            .fallbackToDestructiveMigration()
                             .build()
                 }
             }

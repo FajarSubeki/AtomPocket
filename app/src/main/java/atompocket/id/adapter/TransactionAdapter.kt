@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import atompocket.id.R
 import atompocket.id.database.Transaction
+import kotlinx.android.synthetic.main.item_transaction.view.*
 import kotlinx.android.synthetic.main.item_wallet.view.*
+import kotlinx.android.synthetic.main.item_wallet.view.tvDescWallet
+import kotlinx.android.synthetic.main.item_wallet.view.tvTitleWallet
 import java.text.DecimalFormat
 import java.text.NumberFormat
 
@@ -39,7 +42,7 @@ class TransactionAdapter(transaction: transactionEvent) : RecyclerView.Adapter<T
             val saldoValue: Int? = transaction.nominal.toInt()
             itemView.tvDescWallet.text = transaction.type + " " + formatter.format(saldoValue) + " " + "(" + transaction.desc + ")"
 
-            itemView.ivMenu.setOnClickListener {
+            itemView.ivDelete.setOnClickListener {
                 listener.onDeleteClicked(transaction)
             }
 

@@ -15,10 +15,13 @@ interface WalletDao {
     @Delete
     suspend fun deleteWallet(wallet: Wallet)
 
+    @Delete
+    suspend fun deleteTrans(transaction: Transaction)
+
     @Query("SELECT * FROM wallet_tb ORDER BY id DESC")
     fun getAllTodoList(): LiveData<List<Wallet>>
 
-    @Query("SELECT * FROM wallet_tb WHERE status (:status)")
+    @Query("SELECT * FROM wallet_tb WHERE status = :status")
     fun getWalletActive(status: String): LiveData<List<Wallet>>
 
     @Insert

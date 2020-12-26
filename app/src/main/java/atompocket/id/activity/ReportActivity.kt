@@ -36,7 +36,7 @@ class ReportActivity : BaseActivity(), TransactionAdapter.transactionEvent {
         //Setting up RecyclerView
         rvTransaction.layoutManager = LinearLayoutManager(this)
         transactionAdapter = TransactionAdapter(this)
-        rvWallet.adapter = transactionAdapter
+        rvTransaction.adapter = transactionAdapter
 
         //Setting up ViewModel and LiveData
         walletViewModel = ViewModelProviders.of(this).get(WalletViewModel::class.java)
@@ -51,7 +51,7 @@ class ReportActivity : BaseActivity(), TransactionAdapter.transactionEvent {
     }
 
     override fun onDeleteClicked(transaction: Transaction) {
-        TODO("Not yet implemented")
+        walletViewModel.deleteTrans(transaction)
     }
 
 }

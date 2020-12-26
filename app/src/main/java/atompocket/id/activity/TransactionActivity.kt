@@ -10,7 +10,11 @@ import android.widget.ArrayAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import atompocket.id.R
+import atompocket.id.database.Transaction
+import atompocket.id.database.Wallet
+import atompocket.id.util.AppConstant
 import atompocket.id.viewmodel.WalletViewModel
+import kotlinx.android.synthetic.main.activity_add_wallet.*
 import kotlinx.android.synthetic.main.activity_transaction.*
 import kotlinx.android.synthetic.main.toolbar_view.*
 import kotlinx.android.synthetic.main.toolbar_view.tvTitle
@@ -18,6 +22,8 @@ import kotlinx.android.synthetic.main.toolbar_view.tvTitle
 class TransactionActivity : BaseActivity() {
 
     private lateinit var walletViewModel: WalletViewModel
+    private var type: String? = null
+    private var wallet_type: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +51,7 @@ class TransactionActivity : BaseActivity() {
 
         tvText02.setOnItemSelectedListener(object : OnItemSelectedListener {
             override fun onItemSelected(adapterView: AdapterView<*>, view: View, i: Int, l: Long) {
-                adapterView.selectedItem
+                type = adapterView.selectedItem as String?
             }
 
             override fun onNothingSelected(adapterView: AdapterView<*>?) {}
@@ -55,8 +61,8 @@ class TransactionActivity : BaseActivity() {
 
         walletViewModel.getWalletActive().observe(this, Observer {
             for(item in it){
-
-                val values : Array<String> = arrayOf(item.saldo + " " + item.saldo)
+                val values = arrayOf(item.title + " " + item.saldo)
+                wallet_type = item.title
                 tvText06.adapter = ArrayAdapter<String>(
                     applicationContext,
                     android.R.layout.simple_list_item_1, values
@@ -72,15 +78,35 @@ class TransactionActivity : BaseActivity() {
             override fun onNothingSelected(adapterView: AdapterView<*>?) {}
         })
 
-
-
         ivBack.setOnClickListener {
             finish()
         }
 
         btnSendTrans.setOnClickListener {
-            startActivity(Intent(this, SuccessTransactionActivity::class.java))
+            addTransaction()
+            val intent = Intent(applicationContext, SuccessTransactionActivity::class.java)
+            intent.putExtra("type", type)
+            intent.putExtra("saldo", tvTitleSuccess.text.toString())
+            startActivity(intent)
+            finish()
         }
+    }
+
+    private fun addTransaction(){
+        if (validateFields()){
+            val transaction = Transaction(id = null, nominal = tvTitleSuccess.text.toString(), type = type.toString(), wallet_type = wallet_type.toString(), desc = tvText09.text.toString())
+            walletViewModel.saveTransaction(transaction)
+
+        }
+    }
+
+    private fun validateFields(): Boolean {
+        if (tvTitleSuccess.text.isEmpty()) {
+            tvTitleSuccess.error = getString(R.string.pleaseEnterTitle)
+            tvTitleSuccess.requestFocus()
+            return false
+        }
+        return true
     }
 
 }

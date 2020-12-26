@@ -12,5 +12,5 @@ data class Transaction(@PrimaryKey(autoGenerate = true) val id: Long?,
                        @ColumnInfo(name = "nominal") val nominal: String,
                        @ColumnInfo(name = "type") val type: String,
                        @ColumnInfo(name = "wallet_type") val wallet_type: String,
-                       @ColumnInfo(name = "desc") val desc: Int
+                       @ColumnInfo(name = "desc") val desc: String
 ) : Parcelable

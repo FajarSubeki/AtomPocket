@@ -69,12 +69,13 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/ivDelete"
                 android:layout_marginTop="5dp"
                 android:layout_alignParentEnd="true"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
-                android:src="@drawable/ic_menu"
-                app:tint="@color/color_black_light" />
+                android:src="@drawable/ic_delete"
+                app:tint="@color/red_bg" />
 
         </RelativeLayout>
 

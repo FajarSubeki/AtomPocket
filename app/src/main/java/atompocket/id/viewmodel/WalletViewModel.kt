@@ -38,4 +38,9 @@ class WalletViewModel(application: Application) : AndroidViewModel(application) 
     fun getAllTransaction(): LiveData<List<Transaction>> {
         return allTransactionList
     }
+
+    fun deleteTrans(transaction: Transaction) {
+        repository.deleteTrans(transaction)
+    }
+
 }

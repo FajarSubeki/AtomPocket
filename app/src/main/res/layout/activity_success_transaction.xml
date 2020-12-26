@@ -140,7 +140,7 @@
                 android:id="@+id/tvValue"/>
 
             <Button
-                android:id="@+id/btnCreateAccount"
+                android:id="@+id/btnClose"
                 app:layout_constraintTop_toBottomOf="@id/tvType"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"

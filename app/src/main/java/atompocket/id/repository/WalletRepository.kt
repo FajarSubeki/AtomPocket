@@ -57,4 +57,12 @@ class WalletRepository(application: Application) {
         return allTransaction
     }
 
+    fun deleteTrans(transaction: Transaction) {
+        runBlocking {
+            this.launch(Dispatchers.IO) {
+                walletDao.deleteTrans(transaction)
+            }
+        }
+    }
+
 }
