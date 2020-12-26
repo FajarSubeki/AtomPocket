@@ -35,7 +35,8 @@
                 android:text="Rp ..."
                 android:textColor="@android:color/white"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -46,10 +47,11 @@
                 app:cardCornerRadius="15dp">
 
                 <ImageView
+                    android:id="@+id/ivAvatar"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/avatar" />
+                    tools:ignore="ContentDescription" />
 
             </androidx.cardview.widget.CardView>
 
@@ -65,17 +67,18 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/relaMain" />
+            app:layout_constraintTop_toBottomOf="@id/relaMain"
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/ivQrCode"
             android:layout_width="33dp"
             android:layout_height="33dp"
             android:layout_marginEnd="44dp"
-            android:src="@drawable/ic_qr_code"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvSaldoNow"
-            app:tint="@color/white" />
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -125,18 +128,19 @@
                         android:textColor="@color/color_black_light"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/tvSumIncome"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/view1"
                         android:text="Rp 3.000.0000"
                         android:textColor="@color/color_black_text"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -173,18 +177,19 @@
                         android:textColor="@color/color_black_light"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/tvSumOutcome"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/view1"
                         android:text="Rp 500.000"
                         android:textColor="@color/color_black_text"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -205,7 +210,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="17dp"
-                android:text="Pengeluaran anda 60% untuk makan di luar. Silahkan lihat detail."
                 android:textColor="@color/color_black_text"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/view3" />
@@ -219,7 +223,8 @@
                 android:text="Lihat pengeluaran detail"
                 android:textColor="@color/blue_bg"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/tvDescPengeluaran" />
+                app:layout_constraintTop_toBottomOf="@id/tvDescPengeluaran"
+                tools:ignore="HardcodedText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -235,7 +240,8 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/cardMain" />
+        app:layout_constraintTop_toBottomOf="@id/cardMain"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -271,11 +277,12 @@
                     app:cardCornerRadius="10dp">
 
                     <ImageView
+                        android:id="@+id/ivTrans"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/send"
-                        app:tint="@color/white" />
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -287,7 +294,8 @@
                     android:textColor="@color/color_black_text"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -319,11 +327,12 @@
                     app:cardCornerRadius="10dp">
 
                     <ImageView
+                        android:id="@+id/ivWallet"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/credit_card"
-                        app:tint="@color/white" />
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -335,7 +344,8 @@
                     android:textColor="@color/color_black_text"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -367,11 +377,12 @@
                     app:cardCornerRadius="10dp">
 
                     <ImageView
+                        android:id="@+id/ivReport"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/grafik"
-                        app:tint="@color/white" />
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -383,7 +394,8 @@
                     android:textColor="@color/color_black_text"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 

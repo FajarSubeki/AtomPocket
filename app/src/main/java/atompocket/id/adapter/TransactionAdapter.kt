@@ -1,9 +1,11 @@
 package atompocket.id.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import atompocket.id.R
 import atompocket.id.database.Transaction
@@ -41,6 +43,10 @@ class TransactionAdapter(transaction: transactionEvent) : RecyclerView.Adapter<T
             val formatter: NumberFormat = DecimalFormat("#,###")
             val saldoValue: Int? = transaction.nominal.toInt()
             itemView.tvDescWallet.text = transaction.type + " " + formatter.format(saldoValue) + " " + "(" + transaction.desc + ")"
+
+            if (transaction.type.equals("Uang Keluar")){
+                itemView.tvDescWallet.setTextColor(ContextCompat.getColor(itemView.context, R.color.red_bg))
+            }
 
             itemView.ivDelete.setOnClickListener {
                 listener.onDeleteClicked(transaction)

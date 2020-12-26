@@ -4,12 +4,15 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 import atompocket.id.R
 import atompocket.id.database.Wallet
 import kotlinx.android.synthetic.main.item_wallet.view.*
+import java.lang.NumberFormatException
 import java.text.DecimalFormat
 import java.text.NumberFormat
+
 
 class WalletAdapter(walletEvents: walletEvents) : RecyclerView.Adapter<WalletAdapter.ViewHolder>() {
 
@@ -36,17 +39,34 @@ class WalletAdapter(walletEvents: walletEvents) : RecyclerView.Adapter<WalletAda
             itemView.tvTitleWallet.text = wallet.title
             itemView.tvDescWallet.text = wallet.desc
 
-            val formatter: NumberFormat = DecimalFormat("#,###")
-            val saldoValue: Int? = wallet.saldo.toInt()
-            itemView.tvSumWallet.text = "Rp. " + formatter.format(saldoValue)
+            try {
+                val formatter: NumberFormat = DecimalFormat("#,###")
+                val saldoValue: Int? = wallet.saldo.toInt()
+                itemView.tvSumWallet.text = "Rp. " + formatter.format(saldoValue)
+            }catch (e: NumberFormatException){
+                e.printStackTrace()
+            }
 
             itemView.ivMenu.setOnClickListener {
                 listener.onMenuClicked(wallet)
             }
 
-//            itemView.swWallet.setOnCheckedChangeListener() {
-//                listener.onSwitchClicked()
-//            }
+            if (wallet.status == 1){
+                itemView.swWallet.isChecked = true
+            }else{
+                itemView.swWallet.isChecked = false
+            }
+
+            itemView.swWallet.setOnCheckedChangeListener({ buttonView, isChecked ->
+                if (isChecked){
+                    itemView.swWallet.isChecked = true
+                    listener.onSwitchClicked(wallet,true)
+                }else{
+                    itemView.swWallet.isChecked = false
+                    listener.onSwitchClicked(wallet,false)
+                }
+            })
+
         }
 
     }
@@ -59,7 +79,7 @@ class WalletAdapter(walletEvents: walletEvents) : RecyclerView.Adapter<WalletAda
 
     interface walletEvents{
         fun onMenuClicked(wallet: Wallet)
-        fun onSwitchClicked()
+        fun onSwitchClicked(wallet: Wallet, ischeck: Boolean)
     }
 
 }

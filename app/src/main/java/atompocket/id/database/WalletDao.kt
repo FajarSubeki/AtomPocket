@@ -29,4 +29,10 @@ interface WalletDao {
 
     @Query("SELECT * FROM transaction_tb ORDER BY id DESC")
     fun getAllTransaction(): LiveData<List<Transaction>>
+
+    @Query("UPDATE wallet_tb SET saldo=:saldo WHERE id = :id")
+    fun updateWalletSaldo(saldo: String, id: Long)
+
+    @Query("UPDATE wallet_tb SET status=:status WHERE id = :id")
+    fun updateWalletStatus(status: Int, id: Long)
 }

@@ -11,6 +11,8 @@ object PreferenceUtil {
     val SETUP_REGISTER = "register"
     val SETUP_LOGIN = "login"
     val SALDO = "saldo_masuk"
+    val UANG_MASUK = "uang_masuk"
+    val UANG_KELUAR = "uang_keluar"
 
     fun getPref(context: Context): SharedPreferences? {
         return context.getSharedPreferences(NAME, Context.MODE_PRIVATE)

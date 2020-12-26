@@ -36,7 +36,6 @@
         android:layout_marginEnd="24dp"
         android:hint="Nama Dompet"
         android:paddingStart="35dp"
-        android:digits="a bcdefghijklmnopqrstuvwxyz"
         android:textColorHint="@color/color_black_text"
         android:background="@drawable/button_state_bg"
         tools:ignore="RtlSymmetry" />
@@ -51,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:inputType="textEmailAddress"
+        android:inputType="textMultiLine"
         android:hint="Deskripsi Dompet"
         android:paddingStart="35dp"
         android:textColorHint="@color/color_black_text"

@@ -47,9 +47,10 @@
                 android:id="@+id/tvTitleSuccess"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Rp. 500.000"
+                android:hint="Rp."
                 android:textColorHint="@color/black"
                 android:background="@null"
+                android:inputType="number"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textColor="@android:color/black"
@@ -211,7 +212,7 @@
 
                     <EditText
                         android:id="@+id/tvText09"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/tvText08"
                         android:layout_marginStart="14dp"

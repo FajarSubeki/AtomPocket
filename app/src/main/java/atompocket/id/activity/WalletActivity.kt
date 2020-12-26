@@ -52,8 +52,12 @@ class WalletActivity : BaseActivity(), WalletAdapter.walletEvents {
         walletViewModel.deleteTodo(wallet)
     }
 
-    override fun onSwitchClicked() {
-        TODO("Not yet implemented")
+    override fun onSwitchClicked(wallet: Wallet, isCheck: Boolean) {
+        if (isCheck){
+            walletViewModel.udpateWalletStatus(1, wallet)
+        }else{
+            walletViewModel.udpateWalletStatus(0, wallet)
+        }
     }
 
 }

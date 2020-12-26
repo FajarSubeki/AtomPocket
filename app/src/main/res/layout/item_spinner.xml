@@ -8,6 +8,9 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spinner 1"/>
+        android:text="Dompet Utama - Rp. 1.200.000"
+        android:layout_marginStart="14dp"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
 
 </RelativeLayout>

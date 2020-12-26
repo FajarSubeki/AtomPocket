@@ -23,6 +23,14 @@ class WalletViewModel(application: Application) : AndroidViewModel(application) 
         repository.deleteWallets(wallet)
     }
 
+    fun udpateWalletStatus(status: Int, wallet: Wallet) {
+        repository.updateWalletStatus(status, wallet)
+    }
+
+    fun udpateWalletSaldo(saldo: String, wallet: Wallet) {
+        repository.updateWalletSaldo(saldo, wallet)
+    }
+
     fun getAllTodoList(): LiveData<List<Wallet>> {
         return allWalletList
     }

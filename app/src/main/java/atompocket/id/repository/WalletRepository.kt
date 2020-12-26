@@ -39,6 +39,22 @@ class WalletRepository(application: Application) {
         }
     }
 
+    fun updateWalletStatus(status: Int, wallet: Wallet) {
+        runBlocking {
+            this.launch(Dispatchers.IO) {
+                wallet.id?.let { walletDao.updateWalletStatus(status, it) }
+            }
+        }
+    }
+
+    fun updateWalletSaldo(saldo: String, wallet: Wallet) {
+        runBlocking {
+            this.launch(Dispatchers.IO) {
+                wallet.id?.let { walletDao.updateWalletSaldo(saldo, it) }
+            }
+        }
+    }
+
     fun getWalletList(): LiveData<List<Wallet>> {
         return allWallets
     }
