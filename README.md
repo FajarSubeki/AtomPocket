@@ -1,14 +1,12 @@
 # AtomPocket
 
-<b><h1>Atom Pocket</h1></b>
-
 Atom Pocket merupakan Sebuah aplikasi yang dapat melakukan pencatatan keuangan sederhana, yang dimana dapat mencatatsemua uang masuk dan keluar. Kemudian si pemilik dapat melihat semua history transaksi di laporan yang sudah di sediakan. 
 
 <b>Tools :</b>
 - Kotlin
 - Kotlin Coroutines
 - MVVM 
-- ROOM Database
+- Room Database
 - Gson
 
 <b>Screens UI :</b>
